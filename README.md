@@ -4,7 +4,7 @@
 
 A modern, AI-powered image editor based on Next.js 16, utilizing Google's Gemini models and Meta's SAM-2 for a seamless creative experience.
 
-![Banana Studio Demo](./demo.png)
+![Banana Studio Demo](./docs/demo.png)
 
 ## Features
 
@@ -23,6 +23,29 @@ A modern, AI-powered image editor based on Next.js 16, utilizing Google's Gemini
   - Replicate API Token ([Get here](https://replicate.com/account/api-tokens))
 
 ## Installation
+
+### Method 1: Docker (Recommended)
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/banana-studio.git
+   cd banana-studio
+   ```
+
+2. **Configure Environment**
+   Create a `.env` file (or rename `.env.example`):
+   ```bash
+   GOOGLE_API_KEY=your_google_key
+   REPLICATE_API_TOKEN=your_replicate_token
+   ```
+
+3. **Run with Docker Compose**
+   ```bash
+   docker-compose up -d
+   ```
+   Open [http://localhost:3000](http://localhost:3000).
+
+### Method 2: Local Development
 
 1. **Clone the repository**
    ```bash
@@ -43,7 +66,9 @@ A modern, AI-powered image editor based on Next.js 16, utilizing Google's Gemini
    GOOGLE_API_KEY=your_google_key
    REPLICATE_API_TOKEN=your_replicate_token
    ```
-   *(See [SETUP.md](./SETUP.md) for detailed configuration)*
+    REPLICATE_API_TOKEN=your_replicate_token
+   ```
+   *(See [SETUP.md](./docs/SETUP.md) for detailed configuration)*
 
 4. **Run Development Server**
    ```bash
@@ -86,7 +111,7 @@ src/
 ├── messages/            # i18n Translation Files
 └── ...
 ```
-*(See [DEVELOPMENT.md](./DEVELOPMENT.md) for architecture details)*
+*(See [DEVELOPMENT.md](./docs/DEVELOPMENT.md) for architecture details)*
 
 ## Code Quality
 

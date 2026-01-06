@@ -1,0 +1,19 @@
+services:
+  banana-studio:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    container_name: banana-studio
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      # Use the values from your .env.local file or set them here
+      # You can create a .env file next to this docker-compose.yml
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY}
+      - REPLICATE_API_TOKEN=${REPLICATE_API_TOKEN}
+    volumes:
+      # Persist the SQLite database
+      - ./history.db:/app/history.db
+      # Persist the generated images
+      - ./public/generate_images:/app/public/generate_images

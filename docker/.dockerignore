@@ -1,0 +1,11 @@
+Dockerfile
+.dockerignore
+node_modules
+npm-debug.log
+README.md
+README_CN.md
+.next
+.git
+.env*
+history.db
+public/generate_images

@@ -4,7 +4,7 @@
 
 基于 Next.js 16 构建的现代化 AI 图像编辑器，集成了 Google Gemini 模型和 Meta SAM-2 技术，为您提供流畅、强大的创意体验。
 
-![Banana Studio Demo](./demo.png)
+![Banana Studio Demo](./docs/demo.png)
 
 ## ✨ 主要功能
 
@@ -23,6 +23,29 @@
   - Replicate API Token ([获取地址](https://replicate.com/account/api-tokens))
 
 ## 🚀 安装指南
+
+### 方法 1: Docker 部署 (推荐)
+
+1. **克隆仓库**
+   ```bash
+   git clone https://github.com/your-username/banana-studio.git
+   cd banana-studio
+   ```
+
+2. **配置环境变量**
+   创建 `.env` 文件 (或者复制 `.env.example`):
+   ```bash
+   GOOGLE_API_KEY=your_google_key
+   REPLICATE_API_TOKEN=your_replicate_token
+   ```
+
+3. **使用 Docker Compose 启动**
+   ```bash
+   docker-compose up -d
+   ```
+   启动后访问 [http://localhost:3000](http://localhost:3000)。
+
+### 方法 2: 本地开发环境
 
 1. **克隆仓库**
    ```bash
@@ -43,7 +66,9 @@
    GOOGLE_API_KEY=your_google_key
    REPLICATE_API_TOKEN=your_replicate_token
    ```
-   *(详细配置请参考 [SETUP.md](./SETUP.md))*
+    REPLICATE_API_TOKEN=your_replicate_token
+   ```
+   *(详细配置请参考 [SETUP.md](./docs/SETUP.md))*
 
 4. **启动开发服务器**
    ```bash
@@ -86,7 +111,7 @@ src/
 ├── messages/            # i18n 翻译文件
 └── ...
 ```
-*(查看 [DEVELOPMENT.md](./DEVELOPMENT.md) 获取详细架构说明)*
+*(查看 [DEVELOPMENT.md](./docs/DEVELOPMENT.md) 获取详细架构说明)*
 
 ## 🔒 代码质量
 
