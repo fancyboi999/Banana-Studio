@@ -39,3 +39,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# database and runtime
+*.db
+history.db
+history.db-journal
+/public/generate_images/*
+!/public/generate_images/.gitkeep
