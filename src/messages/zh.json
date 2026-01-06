@@ -1,0 +1,121 @@
+{
+    "HomePage": {
+        "title": "NanoBanana 工作室",
+        "subtitle": "AI 驱动的图像编辑器",
+        "editWithAI": "使用 AI 编辑图片"
+    },
+    "Tools": {
+        "select": "选择",
+        "crop": "裁剪",
+        "filters": "滤镜",
+        "magic": "魔法分割"
+    },
+    "Action": {
+        "upload": "上传图片",
+        "download": "下载",
+        "clear": "清除",
+        "reset": "重置",
+        "process": "处理"
+    },
+    "Status": {
+        "ready": "就绪",
+        "processing": "处理中...",
+        "error": "发生错误"
+    },
+    "Filter": {
+        "vintage_film": "复古胶片",
+        "black_white": "黑白",
+        "sepia": "怀旧棕褐色",
+        "high_contrast": "高对比度",
+        "soft_glow": "柔光",
+        "cinematic_teal": "电影青橙",
+        "neon_glow": "霓虹光晕",
+        "matte_flat": "哑光平滑",
+        "golden_hour": "黄金时刻",
+        "vintage_polaroid": "复古宝丽来",
+        "studio_lighting": "影棚光效",
+        "moody_noir": "情绪暗调",
+        "details": "点击任意滤镜即可使用 AI 立即将其应用到您的图像。每个滤镜都使用精心制作的提示词以获得专业效果。",
+        "Category": {
+            "Film": "胶片",
+            "Monochrome": "单色",
+            "Vintage": "复古",
+            "Dramatic": "戏剧",
+            "Dreamy": "梦幻",
+            "Cinematic": "电影",
+            "Modern": "现代",
+            "Minimal": "极简",
+            "Lighting": "光效",
+            "Instant": "即影即有",
+            "Studio": "影棚",
+            "Noir": "黑色电影"
+        }
+    },
+    "Canvas": {
+        "untitled": "无标题画布",
+        "editSession": "分层编辑会话",
+        "generateSession": "生成式会话",
+        "edit": "编辑",
+        "generate": "生成",
+        "supports": "支持 JPEG, PNG, 和 WebP",
+        "pressToGenerate": "按 Ctrl/Cmd + Enter 生成",
+        "model": "模型",
+        "history": "历史记录",
+        "sessionStarted": "会话已开始",
+        "imageImported": "图像已导入",
+        "aiEditApplied": "AI 编辑已应用",
+        "imageGenerated": "图像已生成",
+        "segmenting": "正在分割对象..."
+    },
+    "Header": {
+        "export": "导出",
+        "help": "帮助",
+        "studioPrefs": "工作室设置",
+        "cleanBackground": "清爽背景",
+        "productPop": "产品聚焦",
+        "portraitGlow": "人像柔光",
+        "cinematicMood": "电影氛围",
+        "vibrantNeon": "霓虹动感",
+        "matteVintage": "复古质感"
+    },
+    "ControlPanel": {
+        "photoFilters": "照片滤镜",
+        "editControls": "编辑控制",
+        "generationControls": "生成控制",
+        "replaceAsset": "替换素材",
+        "importImage": "导入图片",
+        "removeLayer": "移除图层",
+        "editingPrompt": "编辑提示词",
+        "generationPrompt": "生成提示词",
+        "editingPromptPlaceholder": "用黄金时刻的色调重新照亮主体……",
+        "generationPromptPlaceholder": "黄昏时分沙漠城市的超宽幅英雄镜头……",
+        "negativePrompt": "反向提示词",
+        "negativePromptPlaceholder": "要避免的瑕疵（例如：模糊、水印、变形）",
+        "runEdit": "运行编辑",
+        "runGenerate": "运行生成",
+        "processing": "处理中...",
+        "cropControls": "裁剪控制",
+        "cropInstructions": "直接在画布上使用手柄",
+        "zoom": "缩放",
+        "cancel": "取消",
+        "reset": "重置",
+        "applyCrop": "应用裁剪",
+        "outputActions": "输出操作",
+        "exportPng": "导出 PNG",
+        "resetToOriginal": "重置为原始",
+        "free": "自由"
+    },
+    "LayerList": {
+        "title": "图层",
+        "newLayer": "新建图层",
+        "deleteLayer": "删除图层",
+        "confirmDelete": "确定要删除此图层吗？",
+        "emptyState": "图层将显示在这里",
+        "kind": {
+            "source": "原图",
+            "ai": "AI 生成",
+            "segment": "分割",
+            "empty": "空"
+        }
+    }
+}

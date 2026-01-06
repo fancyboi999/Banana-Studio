@@ -1,0 +1,121 @@
+{
+    "HomePage": {
+        "title": "NanoBanana Studio",
+        "subtitle": "AI-Powered Image Editor",
+        "editWithAI": "Edit Images with AI"
+    },
+    "Tools": {
+        "select": "Select",
+        "crop": "Crop",
+        "filters": "Filters",
+        "magic": "Magic Segmentation"
+    },
+    "Action": {
+        "upload": "Upload Image",
+        "download": "Download",
+        "clear": "Clear",
+        "reset": "Reset",
+        "process": "Process"
+    },
+    "Status": {
+        "ready": "Ready",
+        "processing": "Processing...",
+        "error": "Error occurred"
+    },
+    "Filter": {
+        "vintage_film": "Vintage Film",
+        "black_white": "Black & White",
+        "sepia": "Sepia Tone",
+        "high_contrast": "High Contrast",
+        "soft_glow": "Soft Glow",
+        "cinematic_teal": "Cinematic Teal",
+        "neon_glow": "Neon Glow",
+        "matte_flat": "Matte Flat",
+        "golden_hour": "Golden Hour",
+        "vintage_polaroid": "Vintage Polaroid",
+        "studio_lighting": "Studio Lighting",
+        "moody_noir": "Moody Noir",
+        "details": "Click any filter to instantly apply it to your image using AI. Each filter uses carefully crafted prompts for professional results.",
+        "Category": {
+            "Film": "Film",
+            "Monochrome": "Monochrome",
+            "Vintage": "Vintage",
+            "Dramatic": "Dramatic",
+            "Dreamy": "Dreamy",
+            "Cinematic": "Cinematic",
+            "Modern": "Modern",
+            "Minimal": "Minimal",
+            "Lighting": "Lighting",
+            "Instant": "Instant",
+            "Studio": "Studio",
+            "Noir": "Noir"
+        }
+    },
+    "Canvas": {
+        "untitled": "Untitled canvas",
+        "editSession": "Layered Edit Session",
+        "generateSession": "Generative Session",
+        "edit": "Edit",
+        "generate": "Generate",
+        "supports": "Supports JPEG, PNG, and WebP",
+        "pressToGenerate": "Press Ctrl/Cmd + Enter to generate",
+        "model": "Model",
+        "history": "History",
+        "sessionStarted": "Session Started",
+        "imageImported": "Image Imported",
+        "aiEditApplied": "AI Edit Applied",
+        "imageGenerated": "Image Generated",
+        "segmenting": "Segmenting objects..."
+    },
+    "Header": {
+        "export": "Export",
+        "help": "Help",
+        "studioPrefs": "Studio prefs",
+        "cleanBackground": "CLEAN BACKGROUND",
+        "productPop": "PRODUCT POP",
+        "portraitGlow": "PORTRAIT GLOW",
+        "cinematicMood": "CINEMATIC MOOD",
+        "vibrantNeon": "VIBRANT NEON",
+        "matteVintage": "MATTE VINTAGE"
+    },
+    "ControlPanel": {
+        "photoFilters": "Photo Filters",
+        "editControls": "Edit Controls",
+        "generationControls": "Generation Controls",
+        "replaceAsset": "Replace Asset",
+        "importImage": "Import Image",
+        "removeLayer": "Remove Layer",
+        "editingPrompt": "Editing prompt",
+        "generationPrompt": "Generation prompt",
+        "editingPromptPlaceholder": "Relight the subject with golden hour tones...",
+        "generationPromptPlaceholder": "Ultra-wide hero shot of a desert city at dusk...",
+        "negativePrompt": "Negative prompt",
+        "negativePromptPlaceholder": "Artifacts to avoid (e.g., blur, watermark, distortion)",
+        "runEdit": "Run Edit",
+        "runGenerate": "Run Generate",
+        "processing": "Processing...",
+        "cropControls": "Crop controls",
+        "cropInstructions": "Use handles directly on canvas",
+        "zoom": "Zoom",
+        "cancel": "Cancel",
+        "reset": "Reset",
+        "applyCrop": "Apply crop",
+        "outputActions": "Output Actions",
+        "exportPng": "Export PNG",
+        "resetToOriginal": "Reset to Original",
+        "free": "Free"
+    },
+    "LayerList": {
+        "title": "Layers",
+        "newLayer": "New layer",
+        "deleteLayer": "Delete layer",
+        "confirmDelete": "Are you sure you want to delete this layer?",
+        "emptyState": "Layers will appear here",
+        "kind": {
+            "source": "Source",
+            "ai": "AI Generated",
+            "segment": "Segment",
+            "empty": "Empty"
+        }
+    }
+}

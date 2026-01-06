@@ -1,0 +1,121 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-brand-bg: #e0e7ff;
+  --color-brand-beige: #ffedd5;
+  --color-brand-green: #a7f3d0;
+
+  /* Hard Shadows (Neubrutalism) */
+  --shadow-hard-sm: 2px 2px 0px #000000;
+  --shadow-hard-md: 4px 4px 0px #000000;
+  --shadow-hard-lg: 8px 8px 0px #000000;
+  --shadow-hard-xl: 10px 10px 0px #000000;
+
+  /* Borders */
+  --border-3: 3px solid #000000;
+}
+
+@layer utilities {
+  .border-3 {
+    border-width: 3px;
+  }
+
+  .border-b-3 {
+    border-bottom-width: 3px;
+  }
+
+  .border-l-3 {
+    border-left-width: 3px;
+  }
+
+  .border-r-3 {
+    border-right-width: 3px;
+  }
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .scrollbar-none {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+  }
+}
+
+/* Base Reset */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background-color: var(--color-brand-bg);
+  color: #000;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* 
+  Layout Restoration 
+  Using CSS Grid to guarantee the 80px / Auto / 380px structure 
+  that failed with Flexbox.
+*/
+.app-layout {
+  display: grid;
+  height: 100vh;
+  /* Header (auto height) | Workspace (remaining height) */
+  grid-template-rows: auto 1fr;
+}
+
+.workspace-grid {
+  display: grid;
+  /* Sidebar | Canvas | Control Panel */
+  grid-template-columns: 100px 1fr 380px;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Ensure components fill their grid areas */
+.sidebar-area {
+  height: 100%;
+  overflow-y: auto;
+  border-right: 3px solid #000;
+}
+
+.canvas-area {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.controls-area {
+  height: 100%;
+  overflow-y: auto;
+  border-left: 3px solid #000;
+  width: 380px;
+  /* Explicit width reinforcement */
+}
+
+/* Original Scrollbar Restoration */
+.stack-panels::-webkit-scrollbar,
+.controls-area::-webkit-scrollbar {
+  width: 10px;
+}
+
+.stack-panels::-webkit-scrollbar-track,
+.controls-area::-webkit-scrollbar-track {
+  background: #f3f4f6;
+  border-left: 2px solid #000000;
+}
+
+.stack-panels::-webkit-scrollbar-thumb,
+.controls-area::-webkit-scrollbar-thumb {
+  background: #000000;
+  border: 2px solid #000000;
+}
+
+.stack-panels::-webkit-scrollbar-thumb:hover,
+.controls-area::-webkit-scrollbar-thumb:hover {
+  background: #7c3aed;
+}
