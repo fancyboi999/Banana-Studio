@@ -3,6 +3,7 @@ import Cropper, { Area } from 'react-easy-crop';
 import clsx from 'clsx';
 import { useTranslations } from 'next-intl';
 import { LayerList } from './LayerList';
+import { findLayerAtPosition } from '@/lib/pixelDetection';
 
 interface Layer {
     id: string;
@@ -187,6 +188,7 @@ export function Canvas({
                                     {/* Base Image */}
                                     {/* eslint-disable-next-line @next/next/no-img-element */}
                                     <img
+                                        id="canvas-base-image"
                                         src={image}
                                         alt="Base"
                                         className="max-w-full max-h-[calc(100vh-200px)] rounded border-2 border-black block transition-opacity duration-200"
@@ -202,14 +204,55 @@ export function Canvas({
                                             alt={layer.name}
                                             className="absolute top-0 left-0 w-full h-full transition-all duration-200"
                                             style={{
-                                                pointerEvents: activeTool === 'select' || activeTool === 'magic' ? 'auto' : 'none',
+                                                pointerEvents: 'none', // 不响应点击,由透明层统一处理
                                                 opacity: selectedLayerId === layer.id ? 1 : 0.6,
                                                 filter: selectedLayerId === layer.id ? 'drop-shadow(0 0 10px rgba(251, 191, 36, 0.5))' : 'none',
                                                 zIndex: selectedLayerId === layer.id ? 5 : 1
                                             }}
-                                            onClick={() => onLayerSelect(layer.id)}
                                         />
                                     ))}
+
+                                    {/* 透明点击层 - 用于像素级检测 */}
+                                    {(activeTool === 'select' || activeTool === 'magic') && layers.some(l => l.visible && l.preview) && (
+                                        <div
+                                            className="absolute top-0 left-0 w-full h-full cursor-pointer"
+                                            style={{ zIndex: 10 }}
+                                            onClick={async (e) => {
+                                                // 获取点击位置相对于图片的坐标
+                                                const rect = e.currentTarget.getBoundingClientRect();
+                                                const x = e.clientX - rect.left;
+                                                const y = e.clientY - rect.top;
+
+                                                // 转换为百分比
+                                                const clickX = (x / rect.width) * 100;
+                                                const clickY = (y / rect.height) * 100;
+
+                                                // 获取图片实际尺寸
+                                                const baseImg = document.getElementById('canvas-base-image') as HTMLImageElement;
+                                                if (!baseImg) return;
+
+                                                const imageWidth = baseImg.naturalWidth;
+                                                const imageHeight = baseImg.naturalHeight;
+
+                                                console.log('[Click Detection] Starting pixel detection...');
+
+                                                // 调用像素检测
+                                                const layerId = await findLayerAtPosition(
+                                                    layers,
+                                                    clickX,
+                                                    clickY,
+                                                    imageWidth,
+                                                    imageHeight
+                                                );
+
+                                                if (layerId) {
+                                                    onLayerSelect(layerId);
+                                                } else {
+                                                    console.log('[Click Detection] No layer at this position, keeping current selection');
+                                                }
+                                            }}
+                                        />
+                                    )}
 
                                     {/* Selection Box */}
                                     {(() => {
